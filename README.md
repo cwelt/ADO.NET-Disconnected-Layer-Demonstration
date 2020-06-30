@@ -1,7 +1,6 @@
 # ADO.NET-Disconnected-Layer-Demonstration :unlock:
 
-Miniature desktop application for demonstrating the ADO.NET disconnected layer access to databases.  
-
+Miniature desktop application for demonstrating the ADO.NET disconnected layer access to databases.
 ![Disconnected Layer Illustration](screenshots.gif)
 
 The application demonstrates the usage of  [data adapters](https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dataadapter?view=netcore-3.1#remarks), 
@@ -13,5 +12,15 @@ while constantly displaying the
 with an option to display the [row state](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions)
 that is maintained by the [unit of work](https://martinfowler.com/eaaCatalog/unitOfWork.html),  
 and serializing and deseriailzing the data & schema to/from XML and XSD files.
+
+The appliaction uses the following database for demonstration:
+![Database Diagram](DB_Diagram.png)
+
+
+The disconnected layer manipulates the data in-memory while keeping the connection to the database **closed**,  
+and openning the connection only to sync reads/writes,  
+this is a similar concept to the Git & GitHub: 
+- **Pull** (Clone/Fork) is similar to the data adapter's [Fill](https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dataadapter.fill?view=netcore-3.1) method. 
+- **Push** is similar to the data adapter's [Update](https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dataadapter.update?view=netcore-3.1) method. 
 
 ![Disconnected Layer Illustration](Disconnected%20Layer2.png)
