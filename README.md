@@ -18,9 +18,10 @@ and serializing and deseriailzing the data & schema to/from XML and XSD files.
 The appliaction uses the following database for demonstration:
 ![Database Diagram](DB_Diagram.png)
 
-## General Back Ground
-The disconnected layer manipulates the data in-memory while keeping the connection to the database **closed**,  
+## General Background
+The disconnected layer manipulates the data in-memory while keeping the connection to the database **closed**,   
 and openning the connection only to sync reads/writes,  
+conceptually implementing Martin Fowler's [Record set](https://martinfowler.com/eaaCatalog/recordSet.html) pattern.  
 this is a similar concept to the Git & GitHub: 
 - **Pull** (Clone/Fork) is similar to the data adapter's [Fill](https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dataadapter.fill?view=netcore-3.1) method. 
 - **Push** is similar to the data adapter's [Update](https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dataadapter.update?view=netcore-3.1) method. 
