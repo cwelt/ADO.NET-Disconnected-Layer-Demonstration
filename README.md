@@ -2,6 +2,8 @@
 
 Miniature desktop application for demonstrating the ADO.NET disconnected layer access to databases.  
 
+![Disconnected Layer Illustration](Disconnected%20Layer2.png)
+
 The application demonstrates the usage of  [data adapters](https://docs.microsoft.com/en-us/dotnet/api/system.data.common.dataadapter?view=netcore-3.1#remarks), 
 [datasets](https://docs.microsoft.com/en-us/dotnet/api/system.data.dataset?view=netcore-3.1#remarks),
 [data tables](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=netcore-3.1#remarks)  
